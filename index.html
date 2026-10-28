@@ -270,6 +270,9 @@ section{padding-block:56px}
 .dl .sz svg{display:block;margin:0 0 4px auto;width:20px;height:20px}
 .dlnote{font-size:.86rem;color:var(--muted);margin:0}
 .dl .n{font-size:.95rem}
+#mat-dl{scroll-margin-top:130px}
+.later{background:var(--soft)}
+.later .sinia img{aspect-ratio:21/9}
 .prep{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;background:var(--limeSoft);border-radius:var(--r);padding:16px 18px;margin-top:8px}
 .prep b{font-family:var(--display);color:var(--teal);font-size:1.05rem}
 .prep p{margin:2px 0 0;color:var(--muted);font-size:.92rem}
@@ -410,7 +413,7 @@ footer .small{font-size:.8rem}
         <h3><span lang="es">Para participar</span><span lang="ko">참가 준비</span></h3>
         <ul>
           <li><span lang="es">Inscribirse con el formulario que compartimos por redes sociales y WhatsApp</span><span lang="ko">SNS와 WhatsApp으로 공유하는 신청서 작성</span></li>
-          <li><span lang="es">Laptop con QGIS instalado y los datos del taller (<a href="#materiales">descárguelos aquí</a>)</span><span lang="ko">QGIS를 설치하고 실습 데이터를 받은 노트북 (<a href="#materiales">여기서 내려받기</a>)</span></li>
+          <li><span lang="es">Laptop con QGIS instalado y los datos del taller (<a href="#descargas">descárguelos aquí</a>)</span><span lang="ko">QGIS를 설치하고 실습 데이터를 받은 노트북 (<a href="#descargas">여기서 내려받기</a>)</span></li>
           <li><span lang="es">Ganas de aplicar lo aprendido: cada participante prepara un plan de acción</span><span lang="ko">배운 것을 적용할 의지: 참가자마다 Action Plan 작성</span></li>
         </ul>
       </div>
@@ -472,11 +475,21 @@ footer .small{font-size:.8rem}
 <!-- ============ MATERIALES ============ -->
 <main id="materiales" data-page="materiales" hidden>
   <section>
-    <div class="wrap two" style="align-items:start">
-      <div class="sec-head" style="margin:0">
+    <div class="wrap">
+      <div class="sec-head">
         <p class="eyebrow"><span lang="es">Recursos educativos abiertos</span><span lang="ko">열린 교육자료</span></p>
+        <h2><span lang="es">Descargue aquí las guías y los datos</span><span lang="ko">교안과 데이터는 여기서 내려받으세요</span></h2>
+        <p class="muted"><span lang="es">Todo lo que necesita para los talleres está en esta página: guías de práctica en español, datos y el enlace para instalar QGIS.</span><span lang="ko">워크숍에 필요한 실습 교안(스페인어), 데이터, QGIS 설치 링크가 모두 이 페이지에 있습니다.</span></p>
+      </div>
+      <div class="next" id="mat-dl"></div>
+    </div>
+  </section>
+  <section class="later">
+    <div class="wrap two" style="align-items:center">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow"><span lang="es">Más adelante, también en el SINIA</span><span lang="ko">이후 SINIA에도 게시 예정</span></p>
         <h2><span lang="es">Lo que aprendemos queda abierto para todos</span><span lang="ko">배운 것은 모두에게 열려 있습니다</span></h2>
-        <p class="muted"><span lang="es">Descargue aquí las guías de práctica en español y los datos de los talleres. También se publicarán en el SINIA del MMARN, para que cualquier persona los descargue gratis.</span><span lang="ko">스페인어 실습 교안과 실습 데이터를 여기서 내려받을 수 있습니다. 환경부 SINIA에도 올려 누구나 무료로 내려받을 수 있게 할 예정입니다.</span></p>
+        <p class="muted"><span lang="es">Después del taller, las mismas guías y datos se publicarán también en el SINIA del MMARN. Por ahora, descárguelos en esta página.</span><span lang="ko">워크숍 이후 같은 교안과 데이터를 환경부 SINIA에도 올릴 예정입니다. 지금은 이 페이지에서 내려받으세요.</span></p>
       </div>
       <div>
         <a class="sinia" href="https://sinia.ambiente.gob.do" target="_blank" rel="noopener">
@@ -486,11 +499,6 @@ footer .small{font-size:.8rem}
         </a>
         <div class="path">Documentación › Publicaciones › Educación y Divulgación</div>
       </div>
-    </div>
-  </section>
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="next" id="mat-dl"></div>
     </div>
   </section>
 </main>
@@ -567,7 +575,7 @@ footer .small{font-size:.8rem}
       '<div class="count" id="cd" aria-label="Cuenta regresiva"></div>'+
       '<p class="eyebrow" style="margin-top:8px">'+bi('Tres talleres prácticos de QGIS','QGIS 실습 3종')+'</p>'+
       '<div class="parts">'+(next.parts||[]).map(function(p){return '<div class="part"><img src="'+esc(p.img)+'" alt=""><div><p class="k">'+p.min+' min</p><p>'+bi(p.es,p.ko)+'</p>'+'</div></div>'}).join('')+'</div>'+
-      (next.downloads?'<div class="prep" id="prepare"><div><b>'+bi('Prepárese antes del taller','워크숍 전에 준비하세요')+'</b><p>'+bi('Instale QGIS 3.44 LTR y descargue los datos y las guías de los tres talleres.','QGIS 3.44 LTR을 설치하고, 실습 3종의 데이터와 교안을 내려받으세요.')+'</p></div><a class="btn primary" href="#materiales">'+bi('Ver materiales','교육자료 보기')+'</a></div>':'')+'</article>';
+      (next.downloads?'<div class="prep" id="prepare"><div><b>'+bi('Prepárese antes del taller','워크숍 전에 준비하세요')+'</b><p>'+bi('Instale QGIS 3.44 LTR y descargue los datos y las guías de los tres talleres.','QGIS 3.44 LTR을 설치하고, 실습 3종의 데이터와 교안을 내려받으세요.')+'</p></div><a class="btn primary" href="#descargas">'+bi('Ir a las descargas','다운로드로 이동')+'</a></div>':'')+'</article>';
     document.getElementById('cta-next').innerHTML=bi('Próximo taller: '+d.es,'다음 워크숍: '+d.ko);
     var target=new Date(next.date+'T08:30:00-04:00');
     function tick(){var ms=Math.max(0,target-new Date()),dd=Math.floor(ms/864e5),hh=Math.floor(ms/36e5)%24,mm=Math.floor(ms/6e4)%60,ss=Math.floor(ms/1e3)%60;
@@ -601,10 +609,10 @@ footer .small{font-size:.8rem}
 
   // views
   var pages=['inicio','talleres','materiales'];
-  function show(){var h=location.hash.replace('#','');if(pages.indexOf(h)<0)h='inicio';
+  function show(){var h=location.hash.replace('#',''),dl=(h==='descargas');if(dl)h='materiales';if(pages.indexOf(h)<0)h='inicio';
     pages.forEach(function(p){document.getElementById(p).hidden=(p!==h)});
     document.querySelectorAll('nav.views a').forEach(function(a){if(a.dataset.view===h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
-    window.scrollTo(0,0)}
+    if(dl){var t=document.getElementById('mat-dl');requestAnimationFrame(function(){t.scrollIntoView({block:'start'})})}else window.scrollTo(0,0)}
   window.addEventListener('hashchange',show); show();
 
 
