@@ -61,7 +61,8 @@
   "people": [
     {"img": "img/rafael.jpg", "name": "Rafael", "es": "Cofundador. Coordinador, Dirección de Áreas Protegidas, MMARN.", "ko": "공동 창립자. 환경부 보호지역국 조정관"},
     {"img": "img/sheyling.jpg", "name": "Sheyling", "es": "Cofundadora. Médica veterinaria, FUNDEMAR y Buceo Ecológico RD.", "ko": "공동 창립자. FUNDEMAR, Buceo Ecológico RD 수의사"},
-    {"img": "img/yu.jpg", "name": "Byeong-Hyeok Yu", "es": "Cofundador. Director de KNPS-IDCC y fundador de ParkLab (2021).", "ko": "공동 창립자. 국립공원공단 국제개발협력센터장, 파크랩 창립자"}
+    {"img": "img/yu.jpg", "name": "Byeong-Hyeok Yu", "es": "Cofundador. Director de KNPS-IDCC y fundador de ParkLab (2021).", "ko": "공동 창립자. 국립공원공단 국제개발협력센터장, 파크랩 창립자"},
+    {"img": "img/sofi.jpg", "name": "Sofi", "es": "Colaboradora. Buceo Ecológico RD.", "ko": "컨트리뷰터. Buceo Ecológico RD"}
   ],
   "partners": [
     {"img": "img/lg/v/MINPRE_LOGO_V.png", "url": "https://minpre.gob.do/", "name": "Ministerio de la Presidencia"},
@@ -417,7 +418,7 @@ footer .small{font-size:.8rem}
   <section>
     <div class="wrap">
       <div class="sec-head rv">
-        <p class="eyebrow"><span lang="es">Cofundadores</span><span lang="ko">공동 창립자</span></p>
+        <p class="eyebrow"><span lang="es">Personas de ParkLab DR</span><span lang="ko">파크랩 DR 사람들</span></p>
         <h2><span lang="es">Gobierno, sociedad civil y cooperación, juntos desde el inicio</span><span lang="ko">정부, 시민사회, 국제협력이 처음부터 함께</span></h2>
       </div>
       <div class="people" id="people"></div>
@@ -505,10 +506,9 @@ footer .small{font-size:.8rem}
   var rb=D.strip.map(function(s){return '<img src="'+esc(s)+'" alt="">'}).join('');
   document.getElementById('ribbon').innerHTML=rb+rb;
 
-  // people + empty seat
+  // people
   document.getElementById('people').innerHTML=D.people.map(function(p){
-    return '<div class="person rv"><img class="ph" src="'+esc(p.img)+'" alt="'+esc(p.name)+'"><div><b>'+esc(p.name)+'</b><br><span>'+bi(p.es,p.ko)+'</span></div></div>'}).join('')+
-    '<div class="person you rv"><div class="ph" aria-hidden="true">?</div><div><b>'+bi('¿Usted?','당신도')+'</b><br><span>'+bi('Este lugar está libre. Usted también puede ser parte de ParkLab DR.','이 자리는 비어 있습니다. 당신도 파크랩 DR의 한 사람이 될 수 있습니다.')+'</span></div><a href="#talleres">'+bi('Únase en el próximo taller','다음 워크숍에서 만나요')+'</a></div>';
+    return '<div class="person rv"><img class="ph" src="'+esc(p.img)+'" alt="'+esc(p.name)+'"><div><b>'+esc(p.name)+'</b><br><span>'+bi(p.es,p.ko)+'</span></div></div>'}).join('');
 
   // partners
   document.getElementById('partners').innerHTML=D.partners.map(function(p){
