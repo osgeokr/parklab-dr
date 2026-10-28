@@ -1,0 +1,566 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ParkLab República Dominicana</title>
+<link rel="icon" type="image/png" href="img/lg/sticker.png">
+<link rel="canonical" href="https://osgeokr.github.io/parklab-dr/">
+<meta name="description" content="Una comunidad abierta de datos, ciencia y áreas protegidas en la República Dominicana. Talleres de QGIS y Python con datos públicos.">
+<!-- Vista previa al compartir (Facebook, WhatsApp, KakaoTalk). -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ParkLab República Dominicana">
+<meta property="og:title" content="ParkLab República Dominicana">
+<meta property="og:description" content="Una comunidad abierta de datos, ciencia y áreas protegidas. Talleres de QGIS y Python con datos públicos.">
+<meta property="og:url" content="https://osgeokr.github.io/parklab-dr/">
+<meta property="og:image" content="https://osgeokr.github.io/parklab-dr/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ParkLab República Dominicana, comunidad abierta de datos, ciencia y áreas protegidas">
+<meta property="og:locale" content="es_DO">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
+
+<!--
+  CONTENIDO DEL SITIO / 사이트 내용
+  Para actualizar el sitio, edite solo este bloque JSON: talleres, fotos, materiales, personas, socios.
+  사이트를 고칠 때는 이 JSON 블록만 수정하면 됩니다: 워크숍, 사진, 교육자료, 사람, 협력기관.
+  Cada texto tiene "es" y "ko". Fechas en formato AAAA-MM-DD.
+-->
+<script id="site-data" type="application/json">
+{
+  "hero": ["img/ph/c1_16.jpg", "img/ph/c3_15.jpg", "img/ph/c2_12.jpg", "img/ph/c1_08.jpg"],
+  "stats": [
+    {"n": 3, "es": "capacitaciones en 2025", "ko": "2025년 연수"},
+    {"n": 67, "es": "participantes acumulados", "ko": "누적 참가자"},
+    {"n": 100, "suf": "%", "es": "de satisfacción", "ko": "만족도"},
+    {"n": 13500, "suf": " km", "es": "de Seúl a Santo Domingo", "ko": "서울에서 산토도밍고까지"}
+  ],
+  "workshops": [
+    {"id": "taller-2026-11", "status": "next", "date": "2026-11-12", "time": "8:30 a 16:00", "place": "INTEC, Aula Radial (4.º piso, Edificio de Postgrado Eduardo Latorre), Santo Domingo",
+     "es": {"t": "Primer Taller Técnico de ParkLab DR", "s": "4.ª Capacitación en el Uso de Datos. Mi primer mapa con datos del SINIA: tres talleres prácticos de QGIS."},
+     "ko": {"t": "ParkLab DR 제1차 기술 워크숍", "s": "데이터 활용 역량강화 4차 연수. SINIA 데이터로 만드는 나의 첫 번째 지도: QGIS 실습 3종"},
+     "parts": [
+       {"img": "img/t1.jpg", "min": 65, "es": "Taller 1: Mi primer mapa. Áreas protegidas del SINAP con los colores de la UICN.", "ko": "실습 1: 나의 첫 번째 지도. SINAP 보호지역을 IUCN 표준 색으로"},
+       {"img": "img/t2.jpg", "min": 45, "es": "Taller 2: Siga una gota de lluvia. Ríos y cuencas desde Valle Nuevo hasta el mar.", "ko": "실습 2: 빗방울을 따라가 보세요. 바예누에보에서 바다까지 하천과 유역"},
+       {"img": "img/t3.jpg", "min": 45, "es": "Taller 3: Del río al arrecife. Corales de Bayahibe con Allen Coral Atlas y GBIF.", "ko": "실습 3: 강에서 산호초까지. Allen Coral Atlas와 GBIF로 본 바야이베 산호초"}
+     ]},
+    {"id": "cap-2025-3", "status": "past", "date": "2025-11-18", "dateEnd": "2025-11-19", "level": {"es": "Avanzado", "ko": "심화반"},
+     "photos": ["img/ph/c3_11.jpg", "img/ph/c3_15.jpg", "img/ph/c3_09.jpg", "img/ph/c3_02.jpg"],
+     "es": {"t": "3.ª Capacitación en el Uso de Datos", "s": "Procesamiento de series temporales y análisis del sargazo con Python."},
+     "ko": {"t": "데이터 활용 역량강화 3차 연수", "s": "Python으로 시계열 데이터 처리와 모자반 분포 분석"}},
+    {"id": "cap-2025-2", "status": "past", "date": "2025-10-28", "dateEnd": "2025-10-29", "level": {"es": "Intermedio", "ko": "중급반"},
+     "photos": ["img/ph/c2_12.jpg", "img/ph/c2_14.jpg", "img/ph/c2_11.jpg", "img/ph/c2_10.jpg"],
+     "es": {"t": "2.ª Capacitación en el Uso de Datos", "s": "Áreas afectadas por incendios forestales y modelos de distribución de hábitat con QGIS."},
+     "ko": {"t": "데이터 활용 역량강화 2차 연수", "s": "QGIS로 산불 피해지역 분석과 서식지 분포 모델링"}},
+    {"id": "cap-2025-1", "status": "past", "date": "2025-09-30", "dateEnd": "2025-10-01", "level": {"es": "Inicial", "ko": "입문반"},
+     "photos": ["img/ph/c1_08.jpg", "img/ph/c1_16.jpg", "img/ph/c1_02.jpg", "img/ph/c1_05.jpg"],
+     "es": {"t": "1.ª Capacitación en el Uso de Datos", "s": "Mapas de distribución de especies y temperatura superficial del mar con QGIS."},
+     "ko": {"t": "데이터 활용 역량강화 1차 연수", "s": "QGIS로 생물종 분포 지도화와 해수면 온도 분석"}}
+  ],
+  "strip": ["img/ph/c2_14.jpg", "img/ph/c1_08.jpg", "img/ph/c3_11.jpg", "img/ph/c2_16.jpg", "img/ph/c1_02.jpg", "img/ph/c3_05.jpg", "img/ph/c2_12.jpg", "img/ph/c3_09.jpg", "img/ph/c3_21.jpg", "img/ph/c2_11.jpg"],
+  "people": [
+    {"img": "img/rafael.jpg", "name": "Rafael", "es": "Cofundador. Coordinador, Dirección de Áreas Protegidas, MMARN.", "ko": "공동 창립자. 환경부 보호지역국 조정관"},
+    {"img": "img/sheyling.jpg", "name": "Sheyling", "es": "Cofundadora. Médica veterinaria, FUNDEMAR y Buceo Ecológico RD.", "ko": "공동 창립자. FUNDEMAR, Buceo Ecológico RD 수의사"},
+    {"img": "img/yu.jpg", "name": "Byeong-Hyeok Yu", "es": "Cofundador. Director de KNPS-IDCC y fundador de ParkLab (2021).", "ko": "공동 창립자. 국립공원공단 국제개발협력센터장, 파크랩 창립자"}
+  ],
+  "partners": [
+    {"img": "img/lg/v/MINPRE_LOGO_V.png", "url": "https://minpre.gob.do/", "name": "Ministerio de la Presidencia"},
+    {"img": "img/lg/v/MMARN_LOGO_V.png", "url": "https://ambiente.gob.do/", "name": "Ministerio de Medio Ambiente y Recursos Naturales"},
+    {"img": "img/lg/v/KOICA_LOGO_V.png", "url": "https://www.koica.go.kr/", "name": "KOICA"},
+    {"img": "img/lg/v/KNPS_LOGO_V.png", "url": "https://www.knps.or.kr/", "name": "Korea National Park Service"},
+    {"img": "img/lg/v/BUCEO_ECOLOGICO_RD_LOGO_V.png", "url": "https://www.buceoecologico.com/", "name": "Buceo Ecológico RD"},
+    {"img": "img/lg/v/FUNDEMAR_LOGO_V.png", "url": "https://fundemardr.org/", "name": "FUNDEMAR"},
+    {"img": "img/lg/v/ANAMAR_LOGO_V.png", "url": "https://anamar.gob.do/", "name": "ANAMAR"},
+    {"img": "img/lg/v/CBC_LOGO_V.png", "url": "https://cbcbio.org/", "name": "Corredor Biológico en el Caribe"},
+    {"img": "img/lg/v/INTEC_LOGO_V.png", "url": "https://www.intec.edu.do/", "name": "INTEC"}
+  ]
+}
+</script>
+
+<style>
+/* Look: the ParkLab DR print set (white, lime and teal, manatee mark, both flags). Motion: hero photo crossfade, counting numbers, photo ribbon, reveal on scroll. All motion stops with prefers-reduced-motion. */
+:root{
+  --bg:#FFFFFF; --soft:#F1F7F2; --surface:#FFFFFF; --ink:#12302B; --muted:#55685F; --line:#DCE7E1;
+  --teal:#0F4C46; --sea:#14A098; --lime:#8CC63F; --limeSoft:#EAF5DA; --mint:#E6F3F0; --coral:#E05A3A; --band:#0F4C46; --bandInk:#E7F3EF;
+  --display:"Noto Sans", "Noto Sans KR", system-ui, sans-serif;
+  --body:"Noto Sans", "Noto Sans KR", system-ui, sans-serif;
+  --mono:"Noto Sans", "Noto Sans KR", system-ui, sans-serif;
+  --r:12px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1715; --soft:#10201D; --surface:#132623; --ink:#E5F0EC; --muted:#9FB3AC; --line:#22392F;
+  --teal:#7FD6C8; --sea:#3CC6B8; --lime:#A6D65E; --limeSoft:#1E3220; --mint:#12302B; --coral:#F07A5E; --band:#0A2C28; --bandInk:#DDEDE8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1715; --soft:#10201D; --surface:#132623; --ink:#E5F0EC; --muted:#9FB3AC; --line:#22392F;
+  --teal:#7FD6C8; --sea:#3CC6B8; --lime:#A6D65E; --limeSoft:#1E3220; --mint:#12302B; --coral:#F07A5E; --band:#0A2C28; --bandInk:#DDEDE8; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden}
+html:not([data-l="ko"]) [lang="ko"], html[data-l="ko"] [lang="es"]{display:none!important}
+html[data-l="ko"] body{word-break:keep-all}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.2;letter-spacing:-.01em;text-wrap:balance;margin:0;font-weight:800}
+p{margin:0}
+a{color:var(--sea)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offset:2px;border-radius:8px}
+img{max-width:100%;display:block}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);font-weight:700}
+.muted{color:var(--muted)}
+.rule{width:56px;height:5px;border-radius:5px;background:var(--lime);margin:4px 0}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:10px;padding-block:8px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);min-width:0}
+.brand img.mark{height:38px;width:38px}
+.brand b{font-family:var(--display);font-weight:800;font-size:1.05rem;line-height:1}
+.brand small{display:block;font-size:.68rem;color:var(--muted);font-weight:600;letter-spacing:.02em}
+.flags{display:inline-flex;gap:4px;align-items:center}
+.flags img{width:24px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.12);object-fit:cover}
+.lang{margin-left:auto;display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.lang button{font:700 .8rem var(--body);border:0;background:transparent;color:var(--muted);padding:8px 14px;cursor:pointer;min-height:44px;min-width:44px}
+.lang button[aria-pressed="true"]{background:var(--teal);color:var(--bg)}
+nav.views ul{display:flex;gap:4px;list-style:none;margin:0;padding-block:0 8px;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+nav.views a{display:flex;align-items:center;min-height:44px;padding:6px 16px;border-radius:999px;text-decoration:none;color:var(--ink);font-size:.92rem;font-weight:600}
+nav.views a[aria-current="page"]{background:var(--lime);color:#10302A}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:#0F4C46;min-height:min(86svh,720px);display:flex;align-items:flex-end}
+.hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity 1.4s ease, transform 7s linear}
+.hero .slides img.on{opacity:1;transform:scale(1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,40,36,.05) 0%,rgba(9,40,36,.2) 30%,rgba(9,40,36,.72) 58%,rgba(9,40,36,.93) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-block:40px 36px;display:grid;gap:14px;width:100%}
+.hero .sticker{width:96px;height:96px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35));}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-3deg)}}
+.pair{display:inline-flex;align-items:center;gap:12px;color:#fff;font-weight:600;font-size:.86rem;letter-spacing:.02em;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.pair .fl{display:inline-flex;gap:6px}
+.pair img{width:36px;height:24px;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.55);object-fit:cover}
+.hero h1{font-size:clamp(2.1rem,8.5vw,4rem);max-width:15ch;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p.lead{text-shadow:0 1px 8px rgba(0,0,0,.45);max-width:56ch;font-size:1.02rem;color:#E9F3F0}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:999px;font-weight:800;text-decoration:none;font-size:.95rem;font-family:var(--display)}
+.btn.primary{background:var(--lime);color:#10302A}
+.btn.light{border:2px solid #fff;color:#fff}
+.dots{display:flex;gap:6px;margin-top:8px}
+.dots i{width:22px;height:4px;border-radius:4px;background:rgba(255,255,255,.35)}
+.dots i.on{background:var(--lime)}
+
+/* stats */
+.stats{background:var(--surface);color:var(--ink);border-bottom:1px solid var(--line)}
+.stats ul{list-style:none;margin:0 auto;padding-block:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+.stats b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,7vw,2.6rem);line-height:1;color:var(--teal);font-variant-numeric:tabular-nums}
+.stats li{border-left:3px solid var(--lime);padding-left:12px}
+.stats span{font-size:.84rem;color:var(--muted)}
+
+section{padding-block:56px}
+.sec-head{display:grid;gap:8px;margin-bottom:26px;max-width:66ch}
+.sec-head h2{font-size:clamp(1.7rem,6vw,2.5rem)}
+.two{display:grid;gap:28px;align-items:center}
+.two > *{min-width:0}
+
+/* about */
+.origin{display:grid;grid-template-columns:1fr 1fr;margin-top:20px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.origin > div{display:flex;align-items:center;gap:10px;padding:14px 12px;background:var(--surface)}
+.origin > div + div{border-left:1px solid var(--line)}
+.origin img{width:42px;height:28px;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.12);object-fit:cover;flex:none}
+.origin b{display:block;font-size:1rem;color:var(--teal);line-height:1.2}
+.origin small{display:block;font-size:.78rem;color:var(--muted)}
+@media (max-width:340px){.origin{grid-template-columns:1fr}.origin > div + div{border-left:0;border-top:1px solid var(--line)}}
+.photo{margin:0}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.photo figcaption{font-size:.8rem;color:var(--muted);margin-top:8px;padding-left:10px;border-left:3px solid var(--lime)}
+.pillars{display:grid;gap:12px;list-style:none;margin:0;padding:0;counter-reset:p}
+.pillars li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.pillars li::before{counter-increment:p;content:counter(p);width:44px;height:44px;border-radius:50%;background:var(--lime);color:#10302A;display:grid;place-items:center;font:800 1.2rem var(--display)}
+.pillars b{font-family:var(--display);font-size:1.15rem;color:var(--teal);display:block}
+.pillars span{color:var(--muted);font-size:.93rem}
+
+/* ribbon */
+.ribbon{overflow:hidden;padding-block:0}
+.ribbon .track{display:flex;gap:4px;width:max-content;animation:slide 60s linear infinite}
+.ribbon img{height:150px;width:auto;aspect-ratio:4/3;object-fit:cover}
+@keyframes slide{to{transform:translateX(-50%)}}
+.ribbon:hover .track{animation-play-state:paused}
+
+/* skills */
+.skills{background:var(--mint);color:var(--ink);position:relative;overflow:hidden}
+.skills .eyebrow{color:var(--sea)}
+.skills h2{color:var(--teal)}
+.tools{display:grid;gap:12px}
+.tool{display:grid;grid-template-columns:56px 1fr;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);color:#12302B;border-radius:var(--r);padding:16px;font-family:var(--display);font-weight:800;font-size:1.2rem;text-decoration:none}
+.tool:hover{border-color:var(--lime);outline:1px solid var(--lime)}
+.tool img{width:56px;height:56px;object-fit:contain}
+.tool small{display:block;font-family:var(--body);font-weight:500;font-size:.84rem;color:#55685F;line-height:1.4;margin-top:2px}
+.tool .go{display:inline-block;margin-top:6px;font-size:.8rem;font-weight:700;color:#0E7F78}
+.tool .go::after{content:" \2197"}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:7px 13px;border-radius:999px;font-size:.88rem;border:1px solid color-mix(in srgb,var(--bandInk) 35%,transparent);color:var(--bandInk)}
+
+/* join */
+.reqs{background:var(--surface)}
+.reqs .card{background:var(--limeSoft);border-radius:var(--r);padding:20px}
+.reqs ul{margin:10px 0 0;padding-left:1.1em;display:grid;gap:6px}
+.reqs h3{font-size:1.25rem;color:var(--teal)}
+
+/* people */
+.people{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,72%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.person{scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:12px;align-content:start;justify-items:start}
+.person .ph{width:96px;height:96px;border-radius:50%;object-fit:cover;border:4px solid var(--lime)}
+.person b{font-family:var(--display);font-size:1.2rem}
+.person span{color:var(--muted);font-size:.92rem}
+.person.you{border:2px dashed var(--sea);background:var(--soft)}
+.person.you .ph{display:grid;place-items:center;border:3px dashed var(--sea);background:var(--surface);font:800 2.2rem var(--display);color:var(--sea);}
+@keyframes pulse{50%{transform:scale(1.06)}}
+.person.you a{font-weight:800;font-family:var(--display);text-decoration:none}
+
+.partners{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.partners > *{background:#fff;border:1px solid #E3EBE6;border-radius:14px;aspect-ratio:1/1;display:grid;place-items:center;padding:2%;overflow:hidden;min-height:0}
+.partners img{width:100%;height:100%;object-fit:contain}
+.partners a{transition:transform .2s ease, border-color .2s ease}
+.partners a:hover{border-color:var(--lime);transform:translateY(-2px)}
+
+.project{background:var(--mint)}
+.project h2{color:var(--teal)}
+.pfacts{margin:0;display:grid;gap:12px}
+.pfacts > div{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:8px;padding:14px 16px}
+.pfacts dt{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sea)}
+.pfacts dd{margin:4px 0 0;font-size:.95rem;color:var(--ink)}
+/* workshops view */
+.next{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:14px}
+.next .hd{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline}
+.next time{font-size:.8rem;color:var(--sea)}
+.lv.now{font-size:.74rem;font-weight:800;background:var(--lime);color:#10302A;padding:2px 10px;border-radius:999px}
+.next h3{font-size:1.4rem;color:var(--ink)}
+.next .sub{color:var(--muted)}
+.next .eyebrow{color:var(--sea)}
+.facts{margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.facts > div{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-size:.8rem;font-weight:700;color:var(--sea);padding-top:2px}
+.facts dd{margin:0;color:var(--ink);font-size:.95rem}
+.facts a{display:inline-block;margin-top:4px;color:var(--sea);font-weight:700;font-size:.85rem}
+.count{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.count div{background:var(--limeSoft);border-radius:8px;padding:8px 4px;text-align:center}
+.count b{display:block;font:800 1.4rem var(--display);color:var(--teal);font-variant-numeric:tabular-nums;line-height:1.2}
+.count small{font-size:.72rem;color:var(--muted)}
+.parts{display:grid;gap:10px}
+.part{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px;overflow:hidden}
+.part img{width:96px;aspect-ratio:1;object-fit:cover;background:#fff}
+.part .k{font-size:.74rem;font-weight:700;color:var(--sea)}
+.past{display:grid;gap:22px;margin-top:36px}
+.pw{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}
+.pw .hd{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline}
+.pw time{font-family:var(--mono);font-size:.8rem;color:var(--sea)}
+.pw .lv{font-size:.74rem;font-weight:800;background:var(--limeSoft);color:var(--teal);padding:2px 10px;border-radius:999px}
+.pw h3{font-size:1.25rem;width:100%}
+.pw .g{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:4px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
+.pw .g img{aspect-ratio:4/3;object-fit:cover;scroll-snap-align:start;width:100%}
+
+/* materials */
+.sinia{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:none;--x:0 10px 28px rgba(15,76,70,.10)}
+.sinia .chrome{display:flex;align-items:center;gap:6px;padding:8px 12px;background:var(--soft);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.sinia .chrome i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.sinia .chrome span{margin-left:6px;background:var(--surface);border-radius:999px;padding:2px 10px;color:var(--teal);font-weight:500}
+.sinia img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top}
+.url{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;font:800 1.1rem var(--display);color:var(--teal)}
+.url::after{content:"↗";color:var(--sea);font-size:1.2rem}
+.path{font-family:var(--mono);font-size:.78rem;background:var(--soft);border-radius:12px;padding:10px 12px;overflow-x:auto;white-space:nowrap;margin-top:14px}
+footer{background:var(--surface);border-top:1px solid var(--line);color:var(--muted);padding-block:32px;font-size:.88rem}
+footer .row{display:grid;gap:16px}
+footer .fb{display:flex;align-items:center;gap:16px}
+footer .fb img.mark{width:56px;height:56px}
+footer b{font-size:1.05rem;color:var(--ink)}
+footer .small{font-size:.8rem}
+.skip{position:absolute;left:-999px;top:8px;z-index:20;background:var(--teal);color:#fff;padding:10px 16px;border-radius:8px}
+.skip:focus{left:16px}
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (min-width:760px){
+  .two{grid-template-columns:1fr 1fr}
+  .stats ul{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .pillars{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pillars li{grid-template-columns:1fr}
+  .people{grid-auto-flow:row;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}
+  .partners{grid-template-columns:repeat(9,minmax(0,1fr));gap:12px}
+
+  .parts{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .part{grid-template-columns:1fr}
+  .part img{width:100%;aspect-ratio:4/3}
+  .ribbon img{height:200px}
+  .hero .sticker{width:120px;height:120px}
+  footer .row{grid-template-columns:1fr auto;align-items:center}
+}
+@media (max-width:420px){.brand small{display:none}.flags img{width:20px;height:14px}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head><body>
+
+<a class="skip" href="#inicio"><span lang="es">Saltar al contenido</span><span lang="ko">본문 바로가기</span></a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio"><img class="mark" src="img/lg/sticker.png" alt=""><span><b>ParkLab</b><small>República Dominicana</small></span></a>
+    <span class="flags" aria-label="República Dominicana y Corea"><img src="img/lg/flag_do.png" alt="Bandera de la República Dominicana"><img src="img/lg/flag_kr.png" alt="Bandera de Corea"></span>
+    <div class="lang" role="group" aria-label="Idioma / 언어">
+      <button type="button" id="btn-es" data-set="es" aria-pressed="true">ES</button>
+      <button type="button" id="btn-ko" data-set="ko" aria-pressed="false">KO</button>
+    </div>
+  </div>
+  <nav class="views" aria-label="Menú">
+    <ul class="wrap">
+      <li><a href="#inicio" data-view="inicio"><span lang="es">Inicio</span><span lang="ko">홈</span></a></li>
+      <li><a href="#talleres" data-view="talleres"><span lang="es">Talleres</span><span lang="ko">워크숍</span></a></li>
+      <li><a href="#materiales" data-view="materiales"><span lang="es">Materiales</span><span lang="ko">교육자료</span></a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============ INICIO ============ -->
+<main id="inicio" data-page="inicio">
+  <div class="hero">
+    <div class="slides" id="slides"></div>
+    <div class="wrap">
+      <img class="sticker" src="img/lg/sticker.png" alt="Logo de ParkLab">
+      <div class="pair"><span class="fl"><img src="img/lg/flag_do.png" alt="Bandera de la República Dominicana"><img src="img/lg/flag_kr.png" alt="Bandera de Corea"></span><span><span lang="es">República Dominicana y Corea</span><span lang="ko">도미니카공화국과 대한민국</span></span></div>
+      <h1><span lang="es">Una comunidad abierta de <em>datos, ciencia</em> y áreas protegidas</span><span lang="ko">데이터, 과학, 보호지역을 위한 <em>열린 공동체</em></span></h1>
+      <p class="lead"><span lang="es">Instituciones, científicos, guardaparques y ciudadanos aprenden juntos con software libre y datos públicos para proteger la naturaleza del país.</span><span lang="ko">정부기관, 연구자, 레인저, 시민이 무료 소프트웨어와 공개 데이터로 이 나라의 자연을 지키는 방법을 함께 배웁니다.</span></p>
+      <div class="cta">
+        <a class="btn primary" href="#talleres" id="cta-next"><span lang="es">Próximo taller</span><span lang="ko">다음 워크숍</span></a>
+        <a class="btn light" href="#materiales"><span lang="es">Materiales abiertos</span><span lang="ko">교육자료 보기</span></a>
+      </div>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="stats"><ul class="wrap" id="stats"></ul></div>
+
+  <section>
+    <div class="wrap two">
+      <div class="rv">
+        <p class="eyebrow"><span lang="es">Desde 2021</span><span lang="ko">2021년부터</span></p>
+        <h2 style="font-size:clamp(1.7rem,6vw,2.5rem);margin-top:6px"><span lang="es">Park + Lab: parque y laboratorio</span><span lang="ko">Park + Lab: 공원과 실험실</span></h2>
+        <div class="rule"></div>
+        <p class="muted" style="margin-top:10px"><span lang="es">ParkLab nació en el Servicio de Parques Nacionales de Corea (KNPS). Cada año unas 100 personas aprenden información geográfica, datos, código abierto y ecología, sin distinción de cargo ni institución. ParkLab DR lleva esta experiencia a la República Dominicana para que siga creciendo después del proyecto.</span><span lang="ko">파크랩은 국립공원공단에서 시작했습니다. 매년 100명 안팎이 소속과 직급을 넘어 공간정보, 데이터, 오픈소스, 생태를 함께 배웁니다. ParkLab DR은 이 경험을 도미니카공화국에 전하고, 사업이 끝난 뒤에도 이어지는 공동체를 만듭니다.</span></p>
+        <div class="origin">
+          <div><img src="img/lg/flag_kr.png" alt="Corea"><span><b>ParkLab KR</b><small><span lang="es">Seúl, 2021</span><span lang="ko">서울, 2021</span></small></span></div>
+          <div><img src="img/lg/flag_do.png" alt="República Dominicana"><span><b>ParkLab DR</b><small><span lang="es">Santo Domingo, 2026</span><span lang="ko">산토도밍고, 2026</span></small></span></div>
+        </div>
+      </div>
+      <figure class="photo rv"><img src="img/ph/c3_11.jpg" alt="Presentación de un mapa en la 3.ª capacitación"><figcaption><span lang="es">3.ª Capacitación en el Uso de Datos, noviembre de 2025</span><span lang="ko">데이터 활용 역량강화 3차 연수, 2025년 11월</span></figcaption></figure>
+    </div>
+    <div class="wrap" style="margin-top:36px">
+      <ul class="pillars">
+        <li class="rv"><div><b><span lang="es">Talleres de datos</span><span lang="ko">데이터 워크숍</span></b><span><span lang="es">Práctica de SIG de código abierto (QGIS y Python) con datos públicos.</span><span lang="ko">공개 데이터로 하는 오픈소스 GIS(QGIS, Python) 실습</span></span></div></li>
+        <li class="rv"><div><b><span lang="es">Investigación conjunta</span><span lang="ko">공동연구</span></b><span><span lang="es">Proyectos con datos abiertos que nacen de las preguntas de sus miembros.</span><span lang="ko">구성원의 질문에서 시작하는 열린 데이터 연구</span></span></div></li>
+        <li class="rv"><div><b><span lang="es">Ciencia ciudadana</span><span lang="ko">시민과학</span></b><span><span lang="es">Voluntarios que registran la biodiversidad.</span><span lang="ko">시민과 자원봉사자의 생물다양성 기록</span></span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-label="Fotos de las capacitaciones"><div class="track" id="ribbon"></div></div>
+
+  <section class="skills" style="margin-top:56px">
+    <div class="wrap two">
+      <div class="sec-head rv" style="margin:0">
+        <p class="eyebrow"><span lang="es">Mejore sus habilidades</span><span lang="ko">무엇을 배우나요</span></p>
+        <h2><span lang="es">Software libre, datos públicos y problemas reales del país</span><span lang="ko">무료 소프트웨어, 공개 데이터, 이 나라의 실제 문제</span></h2>
+      </div>
+      <div class="tools rv">
+        <a class="tool" href="https://qgis.org/" target="_blank" rel="noopener"><img src="img/lg/qgis.svg" alt=""><div>QGIS<small><span lang="es">Sistema de información geográfica libre y de código abierto</span><span lang="ko">무료 오픈소스 지리정보시스템(GIS)</span></small><span class="go">qgis.org</span></div></a>
+        <a class="tool" href="https://www.python.org/" target="_blank" rel="noopener"><img src="img/lg/python.svg" alt=""><div>Python<small><span lang="es">Lenguaje de programación libre para analizar datos</span><span lang="ko">데이터 분석에 쓰는 무료 프로그래밍 언어</span></small><span class="go">python.org</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reqs">
+    <div class="wrap two" style="align-items:stretch">
+      <div class="card rv">
+        <h3><span lang="es">Para participar</span><span lang="ko">참가 준비</span></h3>
+        <ul>
+          <li><span lang="es">Inscribirse con el formulario que compartimos por redes sociales y WhatsApp</span><span lang="ko">SNS와 WhatsApp으로 공유하는 신청서 작성</span></li>
+          <li><span lang="es">Laptop con QGIS instalado (gratis en qgis.org)</span><span lang="ko">QGIS를 설치한 노트북 (qgis.org에서 무료)</span></li>
+          <li><span lang="es">Ganas de aplicar lo aprendido: cada participante prepara un plan de acción</span><span lang="ko">배운 것을 적용할 의지: 참가자마다 Action Plan 작성</span></li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <h3><span lang="es">Recomendado para</span><span lang="ko">이런 분께 추천</span></h3>
+        <ul>
+          <li><span lang="es">Personal del MMARN y guardaparques</span><span lang="ko">환경부 직원과 레인저</span></li>
+          <li><span lang="es">ONG, universidades, estudiantes y ciudadanos</span><span lang="ko">NGO, 대학, 학생, 시민</span></li>
+          <li><span lang="es">Personas que nunca han usado un SIG: empezamos desde cero</span><span lang="ko">GIS를 처음 써 보는 분도 환영: 처음부터 시작</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="project">
+    <div class="wrap two" style="align-items:start">
+      <div class="sec-head rv" style="margin:0">
+        <p class="eyebrow"><span lang="es">El proyecto</span><span lang="ko">사업 소개</span></p>
+        <h2><span lang="es">Una cooperación entre Corea y la República Dominicana</span><span lang="ko">대한민국과 도미니카공화국의 협력 사업</span></h2>
+        <p class="muted"><span lang="es">ParkLab DR nace en el marco del Proyecto de Fortalecimiento del Monitoreo del Cambio Climático en Parques Nacionales basado en TIC. El proyecto apoya el monitoreo de las áreas protegidas con tecnologías de la información y capacita al personal del MMARN en el uso de datos.</span><span lang="ko">ParkLab DR은 「ICT 기반 국립공원 기후변화 모니터링 역량강화 사업」에서 시작했습니다. 이 사업은 정보통신기술로 보호지역 모니터링을 강화하고, 환경부 직원의 데이터 활용 역량을 키웁니다.</span></p>
+      </div>
+      <dl class="pfacts rv">
+        <div><dt><span lang="es">Cooperan</span><span lang="ko">협력</span></dt><dd><span lang="es">Agencia de Cooperación Internacional de Corea (KOICA) y Ministerio de Medio Ambiente y Recursos Naturales (MMARN)</span><span lang="ko">한국국제협력단(KOICA), 도미니카공화국 환경부(MMARN)</span></dd></div>
+        <div><dt><span lang="es">Ejecuta</span><span lang="ko">수행</span></dt><dd><span lang="es">Servicio de Parques Nacionales de Corea (KNPS)</span><span lang="ko">국립공원공단(KNPS)</span></dd></div>
+        <div><dt><span lang="es">Capacitación</span><span lang="ko">연수</span></dt><dd><span lang="es">8 capacitaciones en el uso de datos. La 4.ª es el Primer Taller Técnico de ParkLab DR.</span><span lang="ko">데이터 활용 역량강화 연수 8회. 4차 연수가 ParkLab DR 제1차 기술 워크숍</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow"><span lang="es">Cofundadores</span><span lang="ko">공동 창립자</span></p>
+        <h2><span lang="es">Gobierno, sociedad civil y cooperación, juntos desde el inicio</span><span lang="ko">정부, 시민사회, 국제협력이 처음부터 함께</span></h2>
+      </div>
+      <div class="people" id="people"></div>
+      <div class="sec-head rv" style="margin:48px 0 18px">
+        <p class="eyebrow"><span lang="es">Con la colaboración de</span><span lang="ko">협력기관</span></p>
+      </div>
+      <div class="partners rv" id="partners"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ TALLERES ============ -->
+<main id="talleres" data-page="talleres" hidden>
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><span lang="es">Talleres</span><span lang="ko">워크숍</span></p>
+        <h2><span lang="es">Próximo taller y capacitaciones anteriores</span><span lang="ko">다음 워크숍과 지난 연수</span></h2>
+      </div>
+      <div id="next"></div>
+      <div class="past" id="past"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ MATERIALES ============ -->
+<main id="materiales" data-page="materiales" hidden>
+  <section>
+    <div class="wrap two" style="align-items:start">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow"><span lang="es">Recursos educativos abiertos</span><span lang="ko">열린 교육자료</span></p>
+        <h2><span lang="es">Lo que aprendemos queda abierto para todos</span><span lang="ko">배운 것은 모두에게 열려 있습니다</span></h2>
+        <p class="muted"><span lang="es">Las guías de práctica en español y los datos de los talleres se publicarán en el SINIA del MMARN, para que cualquier persona los descargue gratis.</span><span lang="ko">스페인어 실습 교안과 데이터는 환경부 SINIA에 올려, 누구나 무료로 내려받을 수 있게 할 예정입니다.</span></p>
+      </div>
+      <div>
+        <a class="sinia" href="https://sinia.ambiente.gob.do" target="_blank" rel="noopener">
+          <div class="chrome"><i></i><i></i><i></i><span>sinia.ambiente.gob.do</span></div>
+          <img src="img/sinia.jpg" alt="Página de inicio del SINIA">
+          <div class="url">sinia.ambiente.gob.do</div>
+        </a>
+        <div class="path">Documentación › Publicaciones › Educación y Divulgación</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div class="fb">
+      <img class="mark" src="img/lg/sticker.png" alt="">
+      <div>
+        <b><span lang="es">¡Aprendamos juntos con datos!</span><span lang="ko">데이터로 함께 배워요</span></b>
+        <p><span lang="es">Secretaría: Buceo Ecológico RD. Con el apoyo de KOICA, MMARN y KNPS.</span><span lang="ko">사무국: Buceo Ecológico RD. KOICA, 환경부, 국립공원공단 지원</span></p>
+      </div>
+    </div>
+    <p class="small">© 2026 ParkLab República Dominicana</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var D=JSON.parse(document.getElementById('site-data').textContent);
+  var root=document.documentElement;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MES=['ene.','feb.','mar.','abr.','may.','jun.','jul.','ago.','sep.','oct.','nov.','dic.'];
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function bi(es,ko){return '<span lang="es">'+esc(es)+'</span><span lang="ko">'+esc(ko)+'</span>'}
+  function fd(iso){var p=iso.split('-');return {es:(+p[2])+' '+MES[+p[1]-1]+' '+p[0], ko:p[0]+'. '+(+p[1])+'. '+(+p[2])+'.'}}
+  function range(a,b){var x=fd(a);if(!b)return x;var y=fd(b);return {es:x.es+' a '+y.es, ko:x.ko+' ~ '+y.ko.slice(6)}}
+  function num(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,',')}
+
+  // hero slideshow
+  var sl=document.getElementById('slides'), dots=document.getElementById('dots');
+  sl.innerHTML=D.hero.map(function(s,i){return '<img src="'+esc(s)+'" alt=""'+(i===0?' class="on"':'')+'>'}).join('');
+  dots.innerHTML=D.hero.map(function(_,i){return '<i'+(i===0?' class="on"':'')+'></i>'}).join('');
+  var cur=0, imgs=sl.querySelectorAll('img'), ds=dots.querySelectorAll('i');
+  if(!reduce&&imgs.length>1)setInterval(function(){imgs[cur].classList.remove('on');ds[cur].classList.remove('on');cur=(cur+1)%imgs.length;imgs[cur].classList.add('on');ds[cur].classList.add('on')},5000);
+
+  // stats
+  document.getElementById('stats').innerHTML=D.stats.map(function(s){return '<li><b data-n="'+s.n+'" data-s="'+esc(s.suf||'')+'">'+(reduce?num(s.n)+esc(s.suf||''):'0')+'</b><span>'+bi(s.es,s.ko)+'</span></li>'}).join('');
+  function countUp(el){var n=+el.dataset.n,s=el.dataset.s,t0=null;
+    function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400);el.textContent=num(Math.round(n*(1-Math.pow(1-k,3))))+s;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+
+  // ribbon (doubled for a seamless loop)
+  var rb=D.strip.map(function(s){return '<img src="'+esc(s)+'" alt="">'}).join('');
+  document.getElementById('ribbon').innerHTML=rb+rb;
+
+  // people + empty seat
+  document.getElementById('people').innerHTML=D.people.map(function(p){
+    return '<div class="person rv"><img class="ph" src="'+esc(p.img)+'" alt="'+esc(p.name)+'"><div><b>'+esc(p.name)+'</b><br><span>'+bi(p.es,p.ko)+'</span></div></div>'}).join('')+
+    '<div class="person you rv"><div class="ph" aria-hidden="true">?</div><div><b>'+bi('¿Usted?','당신도')+'</b><br><span>'+bi('Este lugar está libre. Usted también puede ser parte de ParkLab DR.','이 자리는 비어 있습니다. 당신도 파크랩 DR의 한 사람이 될 수 있습니다.')+'</span></div><a href="#talleres">'+bi('Únase en el próximo taller','다음 워크숍에서 만나요')+'</a></div>';
+
+  // partners
+  document.getElementById('partners').innerHTML=D.partners.map(function(p){
+    var im='<img src="'+esc(p.img)+'" alt="'+esc(p.name)+'">';
+    return p.url?'<a href="'+esc(p.url)+'" target="_blank" rel="noopener" title="'+esc(p.name)+'">'+im+'</a>':'<div title="'+esc(p.name)+'">'+im+'</div>'}).join('');
+
+  // workshops
+  var next=D.workshops.filter(function(w){return w.status==='next'})[0];
+  if(next){var d=fd(next.date);
+    var map='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('INTEC Instituto Tecnológico de Santo Domingo');
+    document.getElementById('next').innerHTML='<article class="next">'+
+      '<div class="hd"><time datetime="'+next.date+'">'+bi(d.es,d.ko)+'</time><span class="lv now">'+bi('Próximo taller','다음 워크숍')+'</span></div><h3>'+bi(next.es.t,next.ko.t)+'</h3><p class="sub">'+bi(next.es.s,next.ko.s)+'</p>'+
+      '<dl class="facts"><div><dt>'+bi('Fecha','날짜')+'</dt><dd>'+bi('Jueves, '+d.es,d.ko+' (목)')+'</dd></div>'+
+      '<div><dt>'+bi('Hora','시간')+'</dt><dd>'+esc(next.time||'')+'</dd></div>'+
+      '<div><dt>'+bi('Lugar','장소')+'</dt><dd>'+esc(next.place)+' <a href="'+map+'" target="_blank" rel="noopener">'+bi('Ver en el mapa','지도 보기')+'</a></dd></div></dl>'+
+      '<div class="count" id="cd" aria-label="Cuenta regresiva"></div>'+
+      '<p class="eyebrow" style="margin-top:8px">'+bi('Tres talleres prácticos de QGIS','QGIS 실습 3종')+'</p>'+
+      '<div class="parts">'+(next.parts||[]).map(function(p){return '<div class="part"><img src="'+esc(p.img)+'" alt=""><div><p class="k">'+p.min+' min</p><p>'+bi(p.es,p.ko)+'</p></div></div>'}).join('')+'</div></article>';
+    document.getElementById('cta-next').innerHTML=bi('Próximo taller: '+d.es,'다음 워크숍: '+d.ko);
+    var target=new Date(next.date+'T08:30:00-04:00');
+    function tick(){var ms=Math.max(0,target-new Date()),dd=Math.floor(ms/864e5),hh=Math.floor(ms/36e5)%24,mm=Math.floor(ms/6e4)%60,ss=Math.floor(ms/1e3)%60;
+      document.getElementById('cd').innerHTML=[[dd,'días','일'],[hh,'horas','시간'],[mm,'min','분'],[ss,'seg','초']].map(function(a){return '<div><b>'+a[0]+'</b><small>'+bi(a[1],a[2])+'</small></div>'}).join('')}
+    tick(); setInterval(tick,1000);
+  }
+  document.getElementById('past').innerHTML=D.workshops.filter(function(w){return w.status==='past'}).map(function(w){var r=range(w.date,w.dateEnd);
+    return '<article class="pw"><div class="hd"><time datetime="'+w.date+'">'+bi(r.es,r.ko)+'</time><span class="lv">'+bi(w.level.es,w.level.ko)+'</span><h3>'+bi(w.es.t,w.ko.t)+'</h3><p class="muted">'+bi(w.es.s,w.ko.s)+'</p></div>'+
+      '<div class="g">'+(w.photos||[]).map(function(p){return '<img src="'+esc(p)+'" alt="">'}).join('')+'</div></article>'}).join('');
+
+  // materials
+
+  // reveal + counters
+  var io='IntersectionObserver' in window&&!reduce?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
+  document.querySelectorAll('.rv').forEach(function(el){if(io)io.observe(el);else el.classList.add('in')});
+  var so='IntersectionObserver' in window&&!reduce?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('b[data-n]').forEach(countUp);so.unobserve(e.target)}})},{threshold:.4}):null;
+  if(so)so.observe(document.getElementById('stats'));
+
+  // language
+  function setLang(l){root.setAttribute('data-l',l);root.lang=l==='ko'?'ko':'es';
+    document.getElementById('btn-es').setAttribute('aria-pressed',l==='es');document.getElementById('btn-ko').setAttribute('aria-pressed',l==='ko');
+    try{localStorage.setItem('parklab-lang',l)}catch(e){}}
+  setLang('es');
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.set)})});
+
+  // views
+  var pages=['inicio','talleres','materiales'];
+  function show(){var h=location.hash.replace('#','');if(pages.indexOf(h)<0)h='inicio';
+    pages.forEach(function(p){document.getElementById(p).hidden=(p!==h)});
+    document.querySelectorAll('nav.views a').forEach(function(a){if(a.dataset.view===h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+    window.scrollTo(0,0)}
+  window.addEventListener('hashchange',show); show();
+
+
+})();
+</script>
+</body></html>
