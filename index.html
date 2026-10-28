@@ -43,6 +43,17 @@
        {"img": "img/t1.jpg", "min": 65, "es": "Taller 1: Mi primer mapa. Áreas protegidas del SINAP con los colores de la UICN.", "ko": "실습 1: 나의 첫 번째 지도. SINAP 보호지역을 IUCN 표준 색으로"},
        {"img": "img/t2.jpg", "min": 45, "es": "Taller 2: Siga una gota de lluvia. Ríos y cuencas desde Valle Nuevo hasta el mar.", "ko": "실습 2: 빗방울을 따라가 보세요. 바예누에보에서 바다까지 하천과 유역"},
        {"img": "img/t3.jpg", "min": 45, "es": "Taller 3: Del río al arrecife. Corales de Bayahibe con Allen Coral Atlas y GBIF.", "ko": "실습 3: 강에서 산호초까지. Allen Coral Atlas와 GBIF로 본 바야이베 산호초"}
+     ],
+     "downloads": [
+       {"n": 1, "url": "https://qgis.org/download/", "size": "qgis.org",
+        "es": {"t": "Instale QGIS 3.44 LTR", "s": "Programa gratuito. Elija la versión LTR 3.44 para Windows."},
+        "ko": {"t": "QGIS 3.44 LTR 설치", "s": "무료 프로그램. Windows용 LTR 3.44 버전 선택"}},
+       {"n": 2, "url": "https://github.com/osgeokr/parklab-dr/releases/download/taller-2026-11/01_Preparacion_Instalar_QGIS.pdf", "size": "PDF, 0,8 MB",
+        "es": {"t": "Guía de instalación paso a paso", "s": "Cómo descargar e instalar QGIS en 11 pasos con imágenes."},
+        "ko": {"t": "단계별 설치 안내서", "s": "QGIS 내려받기와 설치를 그림과 함께 11단계로"}},
+       {"n": 3, "url": "https://github.com/osgeokr/parklab-dr/releases/download/taller-2026-11/ParkLab_DR_Datos.zip", "size": "ZIP, 47 MB",
+        "es": {"t": "Datos de los tres talleres", "s": "Extraiga el archivo en C:\\ para tener C:\\GEODATA\\ParkLab_DR."},
+        "ko": {"t": "실습 3종 데이터", "s": "C:\\ 에 압축을 풀면 C:\\GEODATA\\ParkLab_DR 폴더가 생김"}}
      ]},
     {"id": "cap-2025-3", "status": "past", "date": "2025-11-18", "dateEnd": "2025-11-19", "level": {"es": "Avanzado", "ko": "심화반"},
      "photos": ["img/ph/c3_11.jpg", "img/ph/c3_15.jpg", "img/ph/c3_09.jpg", "img/ph/c3_02.jpg"],
@@ -249,6 +260,16 @@ section{padding-block:56px}
 .part{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px;overflow:hidden}
 .part img{width:96px;aspect-ratio:1;object-fit:cover;background:#fff}
 .part .k{font-size:.74rem;font-weight:700;color:var(--sea)}
+.dls{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.dl{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;text-decoration:none;color:var(--ink);transition:border-color .2s ease}
+.dl:hover{border-color:var(--lime);outline:1px solid var(--lime)}
+.dl .n{width:40px;height:40px;border-radius:50%;background:var(--lime);color:#10302A;display:grid;place-items:center;font:800 1.05rem var(--display)}
+.dl b{display:block;font-family:var(--display);color:var(--teal);font-size:1rem;line-height:1.3}
+.dl small{display:block;color:var(--muted);font-size:.86rem;line-height:1.4;overflow-wrap:anywhere}
+.dl .sz{font-size:.74rem;font-weight:700;color:var(--sea);white-space:nowrap;text-align:right}
+.dl .sz svg{display:block;margin:0 0 4px auto;width:20px;height:20px}
+.dlnote{font-size:.86rem;color:var(--muted);margin:0}
+@media (max-width:420px){.dl{grid-template-columns:40px 1fr}.dl .sz{grid-column:2;text-align:left}.dl .sz svg{display:none}}
 .past{display:grid;gap:22px;margin-top:36px}
 .pw{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}
 .pw .hd{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline}
@@ -385,7 +406,7 @@ footer .small{font-size:.8rem}
         <h3><span lang="es">Para participar</span><span lang="ko">참가 준비</span></h3>
         <ul>
           <li><span lang="es">Inscribirse con el formulario que compartimos por redes sociales y WhatsApp</span><span lang="ko">SNS와 WhatsApp으로 공유하는 신청서 작성</span></li>
-          <li><span lang="es">Laptop con QGIS instalado (gratis en qgis.org)</span><span lang="ko">QGIS를 설치한 노트북 (qgis.org에서 무료)</span></li>
+          <li><span lang="es">Laptop con QGIS instalado y los datos del taller (<a href="#talleres">descárguelos aquí</a>)</span><span lang="ko">QGIS를 설치하고 실습 데이터를 받은 노트북 (<a href="#talleres">여기서 내려받기</a>)</span></li>
           <li><span lang="es">Ganas de aplicar lo aprendido: cada participante prepara un plan de acción</span><span lang="ko">배운 것을 적용할 의지: 참가자마다 Action Plan 작성</span></li>
         </ul>
       </div>
@@ -463,6 +484,11 @@ footer .small{font-size:.8rem}
       </div>
     </div>
   </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="next" id="mat-dl"></div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -515,6 +541,13 @@ footer .small{font-size:.8rem}
     var im='<img src="'+esc(p.img)+'" alt="'+esc(p.name)+'">';
     return p.url?'<a href="'+esc(p.url)+'" target="_blank" rel="noopener" title="'+esc(p.name)+'">'+im+'</a>':'<div title="'+esc(p.name)+'">'+im+'</div>'}).join('');
 
+  // downloads (QGIS link, install guide, workshop data)
+  var ICON_DL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>';
+  var ICON_GO='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7m0 0H9m8 0v8"/></svg>';
+  function dlList(list){
+    return '<ul class="dls">'+list.map(function(x){var ext=!/github\.com\/.*\/releases\/download\//.test(x.url);
+      return '<li><a class="dl" href="'+esc(x.url)+'"'+(ext?' target="_blank" rel="noopener"':' download')+'><span class="n">'+x.n+'</span><span><b>'+bi(x.es.t,x.ko.t)+'</b><small>'+bi(x.es.s,x.ko.s)+'</small></span><span class="sz">'+(ext?ICON_GO:ICON_DL)+esc(x.size||'')+'</span></a></li>'}).join('')+'</ul>'}
+
   // workshops
   var next=D.workshops.filter(function(w){return w.status==='next'})[0];
   if(next){var d=fd(next.date);
@@ -526,7 +559,8 @@ footer .small{font-size:.8rem}
       '<div><dt>'+bi('Lugar','장소')+'</dt><dd>'+esc(next.place)+' <a href="'+map+'" target="_blank" rel="noopener">'+bi('Ver en el mapa','지도 보기')+'</a></dd></div></dl>'+
       '<div class="count" id="cd" aria-label="Cuenta regresiva"></div>'+
       '<p class="eyebrow" style="margin-top:8px">'+bi('Tres talleres prácticos de QGIS','QGIS 실습 3종')+'</p>'+
-      '<div class="parts">'+(next.parts||[]).map(function(p){return '<div class="part"><img src="'+esc(p.img)+'" alt=""><div><p class="k">'+p.min+' min</p><p>'+bi(p.es,p.ko)+'</p></div></div>'}).join('')+'</div></article>';
+      '<div class="parts">'+(next.parts||[]).map(function(p){return '<div class="part"><img src="'+esc(p.img)+'" alt=""><div><p class="k">'+p.min+' min</p><p>'+bi(p.es,p.ko)+'</p></div></div>'}).join('')+'</div>'+
+      (next.downloads?'<p class="eyebrow" id="prepare" style="margin-top:8px">'+bi('Prepárese antes del taller','워크숍 전에 준비하세요')+'</p>'+dlList(next.downloads):'')+'</article>';
     document.getElementById('cta-next').innerHTML=bi('Próximo taller: '+d.es,'다음 워크숍: '+d.ko);
     var target=new Date(next.date+'T08:30:00-04:00');
     function tick(){var ms=Math.max(0,target-new Date()),dd=Math.floor(ms/864e5),hh=Math.floor(ms/36e5)%24,mm=Math.floor(ms/6e4)%60,ss=Math.floor(ms/1e3)%60;
@@ -538,6 +572,10 @@ footer .small{font-size:.8rem}
       '<div class="g">'+(w.photos||[]).map(function(p){return '<img src="'+esc(p)+'" alt="">'}).join('')+'</div></article>'}).join('');
 
   // materials
+  var mat=D.workshops.filter(function(w){return w.downloads})[0];
+  if(mat){var md=fd(mat.date);
+    document.getElementById('mat-dl').innerHTML='<p class="eyebrow">'+bi('Taller del '+md.es,md.ko+' 워크숍')+'</p><h3>'+bi(mat.es.t,mat.ko.t)+'</h3>'+dlList(mat.downloads)+
+      '<p class="dlnote">'+bi('Datos del SINIA (MMARN), Allen Coral Atlas (CC BY 4.0) y GBIF.org. Uso educativo, no comercial.','SINIA(환경부), Allen Coral Atlas(CC BY 4.0), GBIF.org 자료. 비영리 교육용')+'</p>'}
 
   // reveal + counters
   var io='IntersectionObserver' in window&&!reduce?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
