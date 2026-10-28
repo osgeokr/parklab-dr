@@ -40,9 +40,9 @@
      "es": {"t": "Primer Taller Técnico de ParkLab DR", "s": "4.ª Capacitación en el Uso de Datos. Mi primer mapa con datos del SINIA: tres talleres prácticos de QGIS."},
      "ko": {"t": "ParkLab DR 제1차 기술 워크숍", "s": "데이터 활용 역량강화 4차 연수. SINIA 데이터로 만드는 나의 첫 번째 지도: QGIS 실습 3종"},
      "parts": [
-       {"img": "img/t1.jpg", "min": 65, "es": "Taller 1: Mi primer mapa. Áreas protegidas del SINAP con los colores de la UICN.", "ko": "실습 1: 나의 첫 번째 지도. SINAP 보호지역을 IUCN 표준 색으로"},
-       {"img": "img/t2.jpg", "min": 45, "es": "Taller 2: Siga una gota de lluvia. Ríos y cuencas desde Valle Nuevo hasta el mar.", "ko": "실습 2: 빗방울을 따라가 보세요. 바예누에보에서 바다까지 하천과 유역"},
-       {"img": "img/t3.jpg", "min": 45, "es": "Taller 3: Del río al arrecife. Corales de Bayahibe con Allen Coral Atlas y GBIF.", "ko": "실습 3: 강에서 산호초까지. Allen Coral Atlas와 GBIF로 본 바야이베 산호초"}
+       {"img": "img/t1.jpg", "min": 65, "pdf": "https://github.com/osgeokr/parklab-dr/releases/download/taller-2026-11/02_Taller_01_Mi_primer_mapa.pdf", "size": "PDF, 7,3 MB", "short": {"es": "Mi primer mapa", "ko": "나의 첫 번째 지도"}, "es": "Taller 1: Mi primer mapa. Áreas protegidas del SINAP con los colores de la UICN.", "ko": "실습 1: 나의 첫 번째 지도. SINAP 보호지역을 IUCN 표준 색으로"},
+       {"img": "img/t2.jpg", "min": 45, "pdf": "https://github.com/osgeokr/parklab-dr/releases/download/taller-2026-11/03_Taller_02_Siga_una_gota_de_lluvia.pdf", "size": "PDF, 2,6 MB", "short": {"es": "Siga una gota de lluvia", "ko": "빗방울을 따라가 보세요"}, "es": "Taller 2: Siga una gota de lluvia. Ríos y cuencas desde Valle Nuevo hasta el mar.", "ko": "실습 2: 빗방울을 따라가 보세요. 바예누에보에서 바다까지 하천과 유역"},
+       {"img": "img/t3.jpg", "min": 45, "pdf": "https://github.com/osgeokr/parklab-dr/releases/download/taller-2026-11/04_Taller_03_Del_rio_al_arrecife.pdf", "size": "PDF, 3,4 MB", "short": {"es": "Del río al arrecife", "ko": "강에서 산호초까지"}, "es": "Taller 3: Del río al arrecife. Corales de Bayahibe con Allen Coral Atlas y GBIF.", "ko": "실습 3: 강에서 산호초까지. Allen Coral Atlas와 GBIF로 본 바야이베 산호초"}
      ],
      "downloads": [
        {"n": 1, "url": "https://qgis.org/download/", "size": "qgis.org",
@@ -269,6 +269,11 @@ section{padding-block:56px}
 .dl .sz{font-size:.74rem;font-weight:700;color:var(--sea);white-space:nowrap;text-align:right}
 .dl .sz svg{display:block;margin:0 0 4px auto;width:20px;height:20px}
 .dlnote{font-size:.86rem;color:var(--muted);margin:0}
+.dl .n{font-size:.95rem}
+.pdfl{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:6px 12px;min-height:36px;border:1px solid var(--line);border-radius:999px;font-size:.84rem;font-weight:700;color:var(--teal);text-decoration:none;background:var(--soft)}
+.pdfl:hover{border-color:var(--lime)}
+.pdfl svg{width:16px;height:16px}
+.pdfl span{font-weight:500;color:var(--muted)}
 @media (max-width:420px){.dl{grid-template-columns:40px 1fr}.dl .sz{grid-column:2;text-align:left}.dl .sz svg{display:none}}
 .past{display:grid;gap:22px;margin-top:36px}
 .pw{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px}
@@ -472,7 +477,7 @@ footer .small{font-size:.8rem}
       <div class="sec-head" style="margin:0">
         <p class="eyebrow"><span lang="es">Recursos educativos abiertos</span><span lang="ko">열린 교육자료</span></p>
         <h2><span lang="es">Lo que aprendemos queda abierto para todos</span><span lang="ko">배운 것은 모두에게 열려 있습니다</span></h2>
-        <p class="muted"><span lang="es">Las guías de práctica en español y los datos de los talleres se publicarán en el SINIA del MMARN, para que cualquier persona los descargue gratis.</span><span lang="ko">스페인어 실습 교안과 데이터는 환경부 SINIA에 올려, 누구나 무료로 내려받을 수 있게 할 예정입니다.</span></p>
+        <p class="muted"><span lang="es">Descargue aquí las guías de práctica en español y los datos de los talleres. También se publicarán en el SINIA del MMARN, para que cualquier persona los descargue gratis.</span><span lang="ko">스페인어 실습 교안과 실습 데이터를 여기서 내려받을 수 있습니다. 환경부 SINIA에도 올려 누구나 무료로 내려받을 수 있게 할 예정입니다.</span></p>
       </div>
       <div>
         <a class="sinia" href="https://sinia.ambiente.gob.do" target="_blank" rel="noopener">
@@ -548,6 +553,9 @@ footer .small{font-size:.8rem}
     return '<ul class="dls">'+list.map(function(x){var ext=!/github\.com\/.*\/releases\/download\//.test(x.url);
       return '<li><a class="dl" href="'+esc(x.url)+'"'+(ext?' target="_blank" rel="noopener"':' download')+'><span class="n">'+x.n+'</span><span><b>'+bi(x.es.t,x.ko.t)+'</b><small>'+bi(x.es.s,x.ko.s)+'</small></span><span class="sz">'+(ext?ICON_GO:ICON_DL)+esc(x.size||'')+'</span></a></li>'}).join('')+'</ul>'}
 
+  function guideList(w){var g=(w.parts||[]).filter(function(p){return p.pdf});
+    return g.length?dlList(g.map(function(p,i){return {n:'T'+(i+1),url:p.pdf,size:p.size,es:{t:'Taller '+(i+1)+': '+p.short.es,s:'Guía de práctica en español, '+p.min+' min'},ko:{t:'실습 '+(i+1)+': '+p.short.ko,s:'스페인어 실습 교안, '+p.min+'분'}}})):''}
+
   // workshops
   var next=D.workshops.filter(function(w){return w.status==='next'})[0];
   if(next){var d=fd(next.date);
@@ -559,7 +567,7 @@ footer .small{font-size:.8rem}
       '<div><dt>'+bi('Lugar','장소')+'</dt><dd>'+esc(next.place)+' <a href="'+map+'" target="_blank" rel="noopener">'+bi('Ver en el mapa','지도 보기')+'</a></dd></div></dl>'+
       '<div class="count" id="cd" aria-label="Cuenta regresiva"></div>'+
       '<p class="eyebrow" style="margin-top:8px">'+bi('Tres talleres prácticos de QGIS','QGIS 실습 3종')+'</p>'+
-      '<div class="parts">'+(next.parts||[]).map(function(p){return '<div class="part"><img src="'+esc(p.img)+'" alt=""><div><p class="k">'+p.min+' min</p><p>'+bi(p.es,p.ko)+'</p></div></div>'}).join('')+'</div>'+
+      '<div class="parts">'+(next.parts||[]).map(function(p){return '<div class="part"><img src="'+esc(p.img)+'" alt=""><div><p class="k">'+p.min+' min</p><p>'+bi(p.es,p.ko)+'</p>'+(p.pdf?'<a class="pdfl" href="'+esc(p.pdf)+'" download>'+ICON_DL+bi('Guía','교안')+' <span>'+esc(p.size||'')+'</span></a>':'')+'</div></div>'}).join('')+'</div>'+
       (next.downloads?'<p class="eyebrow" id="prepare" style="margin-top:8px">'+bi('Prepárese antes del taller','워크숍 전에 준비하세요')+'</p>'+dlList(next.downloads):'')+'</article>';
     document.getElementById('cta-next').innerHTML=bi('Próximo taller: '+d.es,'다음 워크숍: '+d.ko);
     var target=new Date(next.date+'T08:30:00-04:00');
@@ -574,7 +582,9 @@ footer .small{font-size:.8rem}
   // materials
   var mat=D.workshops.filter(function(w){return w.downloads})[0];
   if(mat){var md=fd(mat.date);
-    document.getElementById('mat-dl').innerHTML='<p class="eyebrow">'+bi('Taller del '+md.es,md.ko+' 워크숍')+'</p><h3>'+bi(mat.es.t,mat.ko.t)+'</h3>'+dlList(mat.downloads)+
+    document.getElementById('mat-dl').innerHTML='<p class="eyebrow">'+bi('Taller del '+md.es,md.ko+' 워크숍')+'</p><h3>'+bi(mat.es.t,mat.ko.t)+'</h3>'+
+      '<p class="eyebrow">'+bi('Guías de los talleres','실습 교안')+'</p>'+guideList(mat)+
+      '<p class="eyebrow">'+bi('Antes del taller: QGIS y datos','워크숍 전 준비: QGIS와 데이터')+'</p>'+dlList(mat.downloads)+
       '<p class="dlnote">'+bi('Datos del SINIA (MMARN), Allen Coral Atlas (CC BY 4.0) y GBIF.org. Uso educativo, no comercial.','SINIA(환경부), Allen Coral Atlas(CC BY 4.0), GBIF.org 자료. 비영리 교육용')+'</p>'}
 
   // reveal + counters
