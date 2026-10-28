@@ -2,7 +2,7 @@
 
 Una comunidad abierta de datos, ciencia y áreas protegidas en la República Dominicana.
 
-Sitio web: https://osgeokr.github.io/parklab-dr/
+Sitio web: https://parklabdr.org/
 
 ## Cómo actualizar el sitio
 
