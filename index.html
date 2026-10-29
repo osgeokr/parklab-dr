@@ -590,8 +590,8 @@ footer .small{font-size:.8rem}
   var mat=D.workshops.filter(function(w){return w.downloads})[0];
   if(mat){var md=fd(mat.date);
     document.getElementById('mat-dl').innerHTML='<p class="eyebrow">'+bi('Taller del '+md.es,md.ko+' 워크숍')+'</p><h3>'+bi(mat.es.t,mat.ko.t)+'</h3>'+
-      '<p class="eyebrow">'+bi('Guías de los talleres','실습 교안')+'</p>'+guideList(mat)+
       '<p class="eyebrow">'+bi('Antes del taller: QGIS y datos','워크숍 전 준비: QGIS와 데이터')+'</p>'+dlList(mat.downloads)+
+      '<p class="eyebrow">'+bi('Guías de los talleres','실습 교안')+'</p>'+guideList(mat)+
       '<p class="dlnote">'+bi('Datos del SINIA (MMARN), Allen Coral Atlas (CC BY 4.0) y GBIF.org. Uso educativo, no comercial.','SINIA(환경부), Allen Coral Atlas(CC BY 4.0), GBIF.org 자료. 비영리 교육용')+'</p>'}
 
   // reveal + counters
