@@ -26,11 +26,16 @@ html[lang=ko] body{word-break:keep-all}
 .wrap{max-width:820px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}
 a{color:var(--sea)}a:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offset:2px;border-radius:8px}
 header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;gap:10px;padding:8px 0}
+.bar{display:flex;align-items:center;gap:10px;padding-block:8px}
 .brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}.brand img{width:38px;height:38px}
 .brand b{font-weight:800;font-size:1.05rem;line-height:1}.brand small{display:block;font-size:.68rem;color:var(--muted);font-weight:600}
-.lang{margin-left:auto;font:700 .82rem var(--f);border:1px solid var(--line);border-radius:999px;padding:9px 14px;text-decoration:none;color:var(--muted);min-height:44px;display:inline-flex;align-items:center}
-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0 0 8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.flags{display:inline-flex;gap:4px;align-items:center}.flags img{width:24px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.12);object-fit:cover}
+.lang{margin-left:auto;display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}
+.lang a{font:700 .8rem var(--f);background:transparent;color:var(--muted);padding:8px 14px;min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.lang a[aria-current="true"]{background:var(--teal);color:var(--bg)}
+header .wrap{max-width:1120px}
+@media (max-width:420px){.brand small{display:none}.flags img{width:20px;height:14px}}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding-block:0 8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 nav a{display:flex;align-items:center;min-height:44px;padding:6px 16px;border-radius:999px;text-decoration:none;color:var(--ink);font-size:.92rem;font-weight:600}
 nav a.on{background:var(--lime);color:#10302A}
 .cover{display:block;width:100%;aspect-ratio:1200/630;object-fit:cover;border-radius:var(--r);margin:24px 0 8px;border:1px solid var(--line)}
@@ -61,7 +66,8 @@ h2{font-size:1.15rem;margin:28px 0 10px;color:var(--teal)}
 footer{margin-top:40px;border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.85rem}
 </style></head><body>
 <header><div class="wrap bar"><a class="brand" href="../../../index.html?ko"><img src="../../../img/lg/sticker.png" alt=""><span><b>ParkLab</b><small>República Dominicana</small></span></a>
-<a class="lang" href="../index.html" hreflang="es">Español</a></div>
+<span class="flags" aria-label="República Dominicana y Corea"><img src="../../../img/lg/flag_do.png" alt="Bandera de la República Dominicana"><img src="../../../img/lg/flag_kr.png" alt="Bandera de Corea"></span>
+<div class="lang" role="group" aria-label="Idioma / 언어"><a href="../index.html" hreflang="es" lang="es" data-set="es">ES</a><a href="index.html" hreflang="ko" lang="ko" data-set="ko" aria-current="true">KO</a></div></div>
 <nav aria-label="Menú"><ul class="wrap"><li><a href="../../../index.html?ko#inicio">홈</a></li><li><a href="../../../index.html?ko#talleres">워크숍</a></li><li><a href="../../../index.html?ko#materiales">교육자료</a></li><li><a href="../../../index.html?ko#noticias" class="on">소식</a></li></ul></nav></header>
 <main class="wrap"><article><div class="meta"><span class="tag">QMaxent</span><time datetime="2026-10-31">2026. 10. 31.</time></div><h1>QMaxent를 소개합니다: QGIS에서 하는 종분포모델링</h1><p class="lead">종의 서식적합도 지도를 단계별로 만들고, 현장에서 어디를 조사할지 고르는 무료 QGIS 플러그인</p>
 <img class="cover" src="../../../img/news/2026-10-31-conozca-qmaxent-og-ko.jpg" alt="">
@@ -82,5 +88,6 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding:24px 0;color:var
 <a class="back" href="../../../index.html?ko#noticias">&larr; 소식 전체 보기</a>
 </article></main>
 <footer><div class="wrap">© 2026 ParkLab República Dominicana</div></footer>
+<script>try{localStorage.setItem('parklab-lang','ko')}catch(e){}</script>
 <script>document.getElementById('copy').addEventListener('click',function(e){var u=e.target.dataset.url;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){document.getElementById('ok').textContent="\ub9c1\ud06c\ub97c \ubcf5\uc0ac\ud588\uc2b5\ub2c8\ub2e4"},function(){prompt('URL',u)})});</script>
 </body></html>
