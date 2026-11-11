@@ -36,7 +36,7 @@
     {"n": 13500, "suf": " km", "es": "de Seúl a Santo Domingo", "ko": "서울에서 산토도밍고까지"}
   ],
   "workshops": [
-    {"id": "cap-2026-4", "status": "next", "date": "2026-11-12", "time": "8:30 a 16:00", "place": "INTEC, Aula Radial (4.º piso, Edificio de Postgrado Eduardo Latorre), Santo Domingo",
+    {"id": "cap-2026-4", "status": "next", "date": "2026-11-12", "time": "8:30 a 16:00", "place": "INTEC, Aula AH306 (Aula Radial), 3.er piso del Edificio AH (Medicina «Ana Mercedes Henríquez»). Entrada: Puerta 7, Calle Crisantemos. Santo Domingo", "map": "https://maps.app.goo.gl/LofjNFJ2TwvjZDcV8",
      "es": {"t": "Primer Taller Técnico de ParkLab DR", "s": "4.ª Capacitación en el Uso de Datos. Mi primer mapa con datos del SINIA: tres talleres prácticos de QGIS."},
      "ko": {"t": "ParkLab DR 제1차 기술 워크숍", "s": "데이터 활용 역량강화 4차 연수. SINIA 데이터로 만드는 나의 첫 번째 지도: QGIS 실습 3종"},
      "parts": [
@@ -648,7 +648,7 @@ footer .small{font-size:.8rem}
   // workshops
   var next=D.workshops.filter(function(w){return w.status==='next'})[0];
   if(next){var d=fd(next.date);
-    var map='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('INTEC Instituto Tecnológico de Santo Domingo');
+    var map=esc(next.map||'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('INTEC Instituto Tecnológico de Santo Domingo'));
     document.getElementById('next').innerHTML='<article class="next">'+
       '<div class="hd"><time datetime="'+next.date+'">'+bi(d.es,d.ko)+'</time><span class="lv now">'+bi('Próximo taller','다음 워크숍')+'</span></div><h3>'+bi(next.es.t,next.ko.t)+'</h3><p class="sub">'+bi(next.es.s,next.ko.s)+'</p>'+
       '<dl class="facts"><div><dt>'+bi('Fecha','날짜')+'</dt><dd>'+bi('Jueves, '+d.es,d.ko+' (목)')+'</dd></div>'+
